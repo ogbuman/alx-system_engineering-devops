@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Configures the firewall on a server
+
+# Install ufw firewall
+sudo apt install ufw
+# Disable firewall
+sudo ufw disable
+
+# Set default rules
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# ufw allow traffic from ssh, http, and https
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
+
+# enable firewall
+sudo ufw enable
+
